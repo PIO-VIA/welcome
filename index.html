@@ -126,6 +126,24 @@
             color: var(--glow-color);
         }
 
+        .website-link a {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 10px 25px;
+            border: 1px solid var(--glow-color);
+            border-radius: 50px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 400;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .website-link a:hover {
+            background-color: var(--glow-color);
+            color: #000;
+            box-shadow: 0 0 15px var(--glow-color);
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: scale(0.9); }
             to { opacity: 1; transform: scale(1); }
@@ -168,11 +186,17 @@
             Toute l'équipe du Club Génie Informatique vous accueille à bras ouverts ! Votre réussite éclatante au concours n'est que le début d'une aventure extraordinaire à l'ENSPY. Nous vous souhaitons une rentrée académique pétillante et pleine de découvertes.
         </p>
         <div class="social-icons">
-            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/people/Club-G%C3%A9nie-Informatique-ENSPY/61552272308234/?_rdc=1&_rdr#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://whatsapp.com/channel/0029Vaw5BEU9hXF90ZfN3i2w" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/@club.gi.enspy?_t=ZM-8zMHg3l5ker&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/club_info_enspy" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@Clubinfoenspy" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/club_info_enspy" target="_blank" aria-label="X"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/club-gi-enspy-1a919b29b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <div class="website-link">
+            <a href="https://gi-enspy.com" target="_blank">Découvrez notre univers</a>
         </div>
     </div>
 
@@ -313,7 +337,7 @@
                 particles[j].update(j);
             }
 
-            if (Math.random() < 0.05) {
+            if (Math.random() < 0.25) {
                 let sx = canvas.width / 2;
                 let sy = canvas.height;
                 let tx = Math.random() * canvas.width;
