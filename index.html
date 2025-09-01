@@ -8,6 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9LWPQ44H7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C9LWPQ44H7');
+    </script>
     <style>
         :root {
             --primary-color: #ffffff;
@@ -227,7 +237,7 @@
     <div class="container">
         <img src="images/clubgi.png" alt="Club GI Logo" class="club-logo">
         <img src="images/helloworld.png" alt="Hello World Logo" class="helloworld-logo">
-        <h1>Félicitations et Bienvenue !</h1>
+        <h1>Bienvenue à l'ENSPY !</h1>
         <div class="message-box">
             <p>
                 Toute l'équipe du Club Génie Informatique vous accueille à bras ouverts ! Votre réussite éclatante au concours n'est que le début d'une aventure extraordinaire à l'ENSPY. Nous vous souhaitons une rentrée académique pétillante et pleine de découvertes.
@@ -239,12 +249,11 @@
             </p>
         </div>
         <div class="social-icons">
-            <a href="https://www.facebook.com/people/Club-G%C3%A9nie-Informatique-ENSPY/61552272308234/?_rdc=1&_rdr#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.facebook.com/share/1G2zgXnBfH/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
             <a href="https://whatsapp.com/channel/0029Vaw5BEU9hXF90ZfN3i2w" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             <a href="https://www.tiktok.com/@club.gi.enspy?_t=ZM-8zMHg3l5ker&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
             <a href="https://www.instagram.com/club_info_enspy" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://www.youtube.com/@Clubinfoenspy" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://x.com/club_info_enspy" target="_blank" aria-label="X"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/club-gi-enspy-1a919b29b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
 
@@ -399,7 +408,39 @@
             }
         }
 
-        window.onload = loop;
+        function launchConfetti() {
+            // The big emoji burst!
+            confetti({
+                particleCount: 80,
+                spread: 100,
+                origin: { y: 0.6 },
+                shapes: ['🎉'],
+                scalar: 2.5 // Makes the emojis larger
+            });
+
+            // Supporting bursts from the sides
+            confetti({
+                particleCount: 100,
+                angle: 60,
+                spread: 80,
+                origin: { x: 0 },
+                startVelocity: 50
+            });
+
+            confetti({
+                particleCount: 100,
+                angle: 120,
+                spread: 80,
+                origin: { x: 1 },
+                startVelocity: 50
+            });
+        }
+
+        window.onload = function() {
+            loop();
+            // A short delay to let the page render before the big explosion
+            setTimeout(launchConfetti, 200);
+        };
     </script>
 </body>
 </html>
