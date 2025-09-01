@@ -104,9 +104,24 @@
         p {
             font-size: 1.2rem;
             max-width: 600px;
-            margin: 0 auto 2rem auto;
+            margin: 0 auto;
             line-height: 1.6;
             font-weight: 300;
+        }
+
+        .message-box {
+            border: 1px solid var(--glow-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 0 auto 2rem auto;
+            max-width: 700px;
+        }
+
+        .message-box p.lang-en {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 1.1rem;
+            margin-top: 0;
         }
 
         .social-icons {
@@ -182,9 +197,16 @@
         <img src="images/clubgi.png" alt="Club GI Logo" class="club-logo">
         <img src="images/helloworld.png" alt="Hello World Logo" class="helloworld-logo">
         <h1>Félicitations et Bienvenue !</h1>
-        <p>
-            Toute l'équipe du Club Génie Informatique vous accueille à bras ouverts ! Votre réussite éclatante au concours n'est que le début d'une aventure extraordinaire à l'ENSPY. Nous vous souhaitons une rentrée académique pétillante et pleine de découvertes.
-        </p>
+        <div class="message-box">
+            <p>
+                Toute l'équipe du Club Génie Informatique vous accueille à bras ouverts ! Votre réussite éclatante au concours n'est que le début d'une aventure extraordinaire à l'ENSPY. Nous vous souhaitons une rentrée académique pétillante et pleine de découvertes.
+            </p>
+        </div>
+        <div class="message-box">
+            <p class="lang-en">
+                The entire Computer Engineering Club team welcomes you with open arms! Your brilliant success in the entrance exam is just the beginning of an extraordinary adventure at ENSPY. We wish you a vibrant and discovery-filled academic year.
+            </p>
+        </div>
         <div class="social-icons">
             <a href="https://www.facebook.com/people/Club-G%C3%A9nie-Informatique-ENSPY/61552272308234/?_rdc=1&_rdr#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
             <a href="https://whatsapp.com/channel/0029Vaw5BEU9hXF90ZfN3i2w" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
